@@ -32,4 +32,5 @@ async function load() {
         console.log(`SERVER IS LISTENING AT ${HOST} ON PORT:${PORT}`);
     })
 }
+
 load();
