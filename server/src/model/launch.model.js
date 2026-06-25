@@ -30,6 +30,57 @@ let launch_id = 1000;
 //  })
 // }
 // saveLaunch(launch_data);
+
+//use full mongo methon 
+// plantet.find(filter).sort();
+// planet.find(filter).select("field1 field2 -not wanted field use -");
+// .skip() .limit() already used for pagination
+// planet.countDocuments({field:something}); to find the count of some particular data
+
+//to update
+// user.findOneAndUpdate();
+// user.updateOne()
+// await User.updateOne(
+//     { _id: id },
+//     {
+//         $set: {
+//             age: 1000
+//         }
+//     }
+// )
+// $push:add element to array
+// $pull :removes element from array
+// $unset:Removes a field completely. 
+// $inc:increment by number like inc by 2 or 3 
+// $mul:multiply
+// $rename : rename the field like age changed to gender
+// $currentDate:set date
+
+// | Operator  | Meaning               |
+// | --------- | --------------------- |
+// | `$gt`     | Greater than          |
+// | `$gte`    | Greater than or equal |
+// | `$lt`     | Less than             |
+// | `$lte`    | Less than or equal    |
+// | `$eq`     | Equal                 |
+// | `$ne`     | Not equal             |
+// | `$in`     | In list               |
+// | `$nin`    | Not in list           |
+// | `$and`    | Logical AND           |
+// | `$or`     | Logical OR            |
+// | `$nor`    | Logical NOR           |
+// | `$exists` | Field exists          |
+// | `$regex`  | Pattern matching      |
+
+// await User.find({
+//     age: {
+//         $gt: 9
+//     },
+//     city: "Delhi"
+// });
+
+
+
 async function checkdata(filter) {
     return await mongo.findOne(filter);
 }
